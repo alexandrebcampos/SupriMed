@@ -1,0 +1,291 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E64C38AE-0826-40A4-B9E0-E04B8D17ED8A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ProjetoSupriMed</RootNamespace>
+    <AssemblyName>ProjetoSupriMed</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Code\BLL\AgendaVisitasBLL.cs" />
+    <Compile Include="Code\BLL\AutenticarBLL.cs" />
+    <Compile Include="Code\BLL\CadFuncionarioBLL.cs" />
+    <Compile Include="Code\BLL\CadLoginBLL.cs" />
+    <Compile Include="Code\BLL\ConsultaVendasBLL.cs" />
+    <Compile Include="Code\BLL\PecasBLL.cs" />
+    <Compile Include="Code\BLL\ClienteBLL.cs" />
+    <Compile Include="Code\BLL\ProdutosBLL.cs" />
+    <Compile Include="Code\BLL\SetoresBLL.cs" />
+    <Compile Include="Code\BLL\VendasBLL.cs" />
+    <Compile Include="Code\BLL\VendedoresBLL.cs" />
+    <Compile Include="Code\DAL\ConexaoDAL.cs" />
+    <Compile Include="Code\DTO\ClientesDTO.cs" />
+    <Compile Include="Code\DTO\FuncionariosDTO.cs" />
+    <Compile Include="Code\DTO\LoginDTO.cs" />
+    <Compile Include="Code\DTO\PecasDTO.cs" />
+    <Compile Include="Code\DTO\ProdutosDTO.cs" />
+    <Compile Include="Code\DTO\SetoresDTO.cs" />
+    <Compile Include="Code\DTO\UsuarioLogadoDTO.cs" />
+    <Compile Include="Code\DTO\Validação\Validador.cs" />
+    <Compile Include="Code\DTO\VendasDTO.cs" />
+    <Compile Include="Code\DTO\VendasItensDTO.cs" />
+    <Compile Include="Code\DTO\VendedoresDTO.cs" />
+    <Compile Include="Code\DTO\VisitasDTO.cs" />
+    <Compile Include="DesktopAPP\ConsultaVendas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DesktopAPP\ConsultaVendas.Designer.cs">
+      <DependentUpon>ConsultaVendas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DesktopAPP\FormManutencao\FrmBackup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DesktopAPP\FormManutencao\FrmBackup.Designer.cs">
+      <DependentUpon>FrmBackup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DesktopAPP\FrmAgendaVisitas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DesktopAPP\FrmAgendaVisitas.Designer.cs">
+      <DependentUpon>FrmAgendaVisitas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DesktopAPP\FrmCadLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DesktopAPP\FrmCadLogin.Designer.cs">
+      <DependentUpon>FrmCadLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DesktopAPP\FrmCadSetores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DesktopAPP\FrmCadSetores.Designer.cs">
+      <DependentUpon>FrmCadSetores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DesktopAPP\FrmCadVendedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DesktopAPP\FrmCadVendedor.Designer.cs">
+      <DependentUpon>FrmCadVendedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DesktopAPP\FrmCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DesktopAPP\FrmCliente.Designer.cs">
+      <DependentUpon>FrmCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DesktopAPP\FrmConsultaVisita.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DesktopAPP\FrmConsultaVisita.Designer.cs">
+      <DependentUpon>FrmConsultaVisita.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DesktopAPP\FrmDetalheVenda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DesktopAPP\FrmDetalheVenda.Designer.cs">
+      <DependentUpon>FrmDetalheVenda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DesktopAPP\FrmFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DesktopAPP\FrmFuncionario.Designer.cs">
+      <DependentUpon>FrmFuncionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DesktopAPP\FrmLoginAcesso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DesktopAPP\FrmLoginAcesso.Designer.cs">
+      <DependentUpon>FrmLoginAcesso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DesktopAPP\FrmPecas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DesktopAPP\FrmPecas.Designer.cs">
+      <DependentUpon>FrmPecas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DesktopAPP\FrmPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DesktopAPP\FrmPrincipal.Designer.cs">
+      <DependentUpon>FrmPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DesktopAPP\FormPadrao\FrmPadrao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DesktopAPP\FormPadrao\FrmPadrao.Designer.cs">
+      <DependentUpon>FrmPadrao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DesktopAPP\FrmProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DesktopAPP\FrmProduto.Designer.cs">
+      <DependentUpon>FrmProduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DesktopAPP\FrmVendas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DesktopAPP\FrmVendas.Designer.cs">
+      <DependentUpon>FrmVendas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="DesktopAPP\ConsultaVendas.resx">
+      <DependentUpon>ConsultaVendas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DesktopAPP\FormManutencao\FrmBackup.resx">
+      <DependentUpon>FrmBackup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DesktopAPP\FrmAgendaVisitas.resx">
+      <DependentUpon>FrmAgendaVisitas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DesktopAPP\FrmCadLogin.resx">
+      <DependentUpon>FrmCadLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DesktopAPP\FrmCadSetores.resx">
+      <DependentUpon>FrmCadSetores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DesktopAPP\FrmCadVendedor.resx">
+      <DependentUpon>FrmCadVendedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DesktopAPP\FrmCliente.resx">
+      <DependentUpon>FrmCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DesktopAPP\FrmConsultaVisita.resx">
+      <DependentUpon>FrmConsultaVisita.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DesktopAPP\FrmDetalheVenda.resx">
+      <DependentUpon>FrmDetalheVenda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DesktopAPP\FrmFuncionario.resx">
+      <DependentUpon>FrmFuncionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DesktopAPP\FrmLoginAcesso.resx">
+      <DependentUpon>FrmLoginAcesso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DesktopAPP\FrmPecas.resx">
+      <DependentUpon>FrmPecas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DesktopAPP\FrmPrincipal.resx">
+      <DependentUpon>FrmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DesktopAPP\FormPadrao\FrmPadrao.resx">
+      <DependentUpon>FrmPadrao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DesktopAPP\FrmProduto.resx">
+      <DependentUpon>FrmProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DesktopAPP\FrmVendas.resx">
+      <DependentUpon>FrmVendas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\application_exit.ico" />
+    <Content Include="img\agenda_1.ico" />
+    <Content Include="img\background_login.png" />
+    <Content Include="img\background_principal.jpg" />
+    <Content Include="img\back_2.png" />
+    <None Include="img\business_people_01.ico" />
+    <Content Include="img\currency_dollar_blue.ico" />
+    <Content Include="img\date.ico" />
+    <Content Include="img\deletered.png" />
+    <Content Include="img\department.ico" />
+    <Content Include="img\diagram_v2_17.ico" />
+    <Content Include="img\document_new.png" />
+    <Content Include="img\drive_backup.ico" />
+    <Content Include="img\drive_restore.ico" />
+    <Content Include="img\edit_delete.png" />
+    <Content Include="img\edit_find.png" />
+    <Content Include="img\event_search_48.png" />
+    <Content Include="img\exit.ico" />
+    <Content Include="img\health_care_shield.ico" />
+    <Content Include="img\login.ico" />
+    <Content Include="img\lupa.png" />
+    <Content Include="img\mail_new.ico" />
+    <Content Include="img\new.png" />
+    <None Include="img\Register-Icon.png" />
+    <Content Include="img\salesman_add.ico" />
+    <Content Include="img\save.png" />
+    <Content Include="img\service_manager.png" />
+    <Content Include="img\stethoscope.ico" />
+    <Content Include="img\system_software_update.png" />
+    <Content Include="img\user.ico" />
+    <Content Include="img\user_group_new.png" />
+    <Content Include="img\user_group_new_icon.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
